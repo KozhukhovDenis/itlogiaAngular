@@ -43,7 +43,8 @@
                   "maximumError": "1mb"
                 }
               ],
-              "outputHashing": "all"
+              "outputHashing": "all",
+              "baseHref": "/itlogiaAngular/"
             },
             "development": {
               "buildOptimizer": false,
