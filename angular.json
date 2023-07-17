@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/itlogia-angular",
+            "outputPath": "dist",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -21,8 +21,16 @@
             ],
             "tsConfig": "tsconfig.app.json",
             "assets": [
-              "src/favicon.ico",
-              "src/assets"
+              {
+                "glob": "**/*",
+                "input": "src/assets/",
+                "output": "/assets/"
+              },
+              {
+                "glob": "favicon.ico",
+                "input": "src/",
+                "output": "/"
+              }
             ],
             "styles": [
               "src/styles.css"
@@ -43,8 +51,7 @@
                   "maximumError": "1mb"
                 }
               ],
-              "outputHashing": "all",
-              "baseHref": "/itlogiaAngular/"
+              "outputHashing": "all"
             },
             "development": {
               "buildOptimizer": false,
